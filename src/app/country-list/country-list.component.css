@@ -1,0 +1,50 @@
+/* src/app/country-list/country-list.component.css */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  input.form-control {
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  select.form-control {
+    height: 40px;
+    font-size: 1rem;
+  }
+/* src/app/country-list/country-list.component.css */
+.spinner-border {
+    margin: 20px auto;
+    width: 3rem;
+    height: 3rem;
+  }
+    

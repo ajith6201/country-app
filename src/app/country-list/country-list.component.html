@@ -1,0 +1,36 @@
+<!-- src/app/country-list/country-list.component.html -->
+<div class="container mt-4">
+    <h2>Country List</h2>
+  
+    <!-- Country List Display with trackBy -->
+    <div class="row mt-4">
+      <div class="col-md-4" *ngFor="let country of countries; trackBy: trackByFn">
+        <a [routerLink]="['/country', country.name.common]" class="text-decoration-none">
+          <div class="card mb-4">
+            <img
+              [src]="country.flags.svg"
+              class="card-img-top"
+              alt="Flag of {{ country.name.common }}"
+              style="height: 150px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ country.name.common }}</h5>
+              <p class="card-text">
+                <strong>Capital:</strong> {{ country.capital ? country.capital[0] : 'N/A' }}<br />
+                <strong>Population:</strong> {{ country.population | number }}<br />
+                <strong>Region:</strong> {{ country.region }}
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+  
